@@ -10,11 +10,21 @@ public class Triangle {
         triangle.drawHorizontalLine(Integer.parseInt(input));
 
         triangle.drawVerticalLine(Integer.parseInt(scanner.nextLine()));
+        triangle.drawRightTriangle(Integer.parseInt(scanner.nextLine()));
+    }
+
+    private void drawRightTriangle(int number) {
+        for (int i=1; i<=number; i++) {
+            for (int j=0; j<i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     private void drawVerticalLine(int number) {
         for (int i=0; i<number; i++) {
-            System.out.println("*3");
+            System.out.println("*");
         }
     }
 
@@ -24,7 +34,7 @@ public class Triangle {
         }
     }
 
-    public void printAsterisk() {
+    private void printAsterisk() {
         System.out.print("*");
     }
-};
+}
