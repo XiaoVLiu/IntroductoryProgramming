@@ -5,6 +5,22 @@ public class Diamond {
         Scanner scanner = new Scanner(System.in);
 
         Diamond.drawIsoscelesTriangle(Integer.parseInt(scanner.nextLine()));
+        Diamond.drawDiamond(Integer.parseInt(scanner.nextLine()));
+    }
+
+    private static void drawDiamond(int number) {
+        drawIsoscelesTriangle(number);
+        for (int i=1; i<number; i++) {
+            for (int j=0; j<i; j++) {
+                System.out.print(" ");
+            }
+
+            for (int k=0; k<2*(number-i)-1; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
     }
 
     private static void drawIsoscelesTriangle(int number) {
