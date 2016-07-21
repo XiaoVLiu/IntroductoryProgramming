@@ -8,6 +8,14 @@ public class Triangle {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         triangle.drawHorizontalLine(Integer.parseInt(input));
+
+        triangle.drawVerticalLine(Integer.parseInt(scanner.nextLine()));
+    }
+
+    private void drawVerticalLine(int number) {
+        for (int i=0; i<number; i++) {
+            System.out.println("*3");
+        }
     }
 
     private void drawHorizontalLine(int number) {
